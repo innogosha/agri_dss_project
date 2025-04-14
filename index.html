@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-DSS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Agri-DSS</h1>
+        <form id="recommendationForm">
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="Tanzania">Tanzania</option>
+                <!-- Add more regions as necessary -->
+            </select>
+
+            <label for="soil_type">Soil Type:</label>
+            <select id="soil_type" name="soil_type">
+                <option value="clay">Clay</option>
+                <option value="sandy">Sandy</option>
+                <option value="loam">Loam</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        <div id="recommendations">
+            <!-- Recommendations will be shown here -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
